@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Video } from '../app-types';
 
 @Component({
@@ -7,12 +7,13 @@ import { Video } from '../app-types';
   styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent {
-  selectedVideo: string | undefined;
+  @Input() selectedVideo: string | undefined;
   @Input() videos: Video[] | undefined;
+  @Output() videoSelected = new EventEmitter<string>();
   
   constructor() { }
 
   selectVideo(id: string): void {
-    this.selectedVideo = id;
+    this.videoSelected.emit(id);
   }
 }

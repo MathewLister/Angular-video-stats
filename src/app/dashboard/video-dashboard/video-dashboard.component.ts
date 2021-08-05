@@ -7,9 +7,16 @@ import { Video } from '../app-types';
   styleUrls: ['./video-dashboard.component.scss']
 })
 export class VideoDashboardComponent implements OnInit {
+  
+  selectedVideo: string | undefined;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onVideoSelected(id: string) {
+    this.selectedVideo = id;
   }
 
   videos: Video[] = [
