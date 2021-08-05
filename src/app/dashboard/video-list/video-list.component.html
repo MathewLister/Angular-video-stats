@@ -1,1 +1,6 @@
-<p>video-list works!</p>
+<h1>VIDEO LIST</h1>
+<ul>
+    <li *ngFor="let video of videos">
+        {{ video.title }} by {{ video.author }}
+    </li>
+</ul>
