@@ -5,6 +5,7 @@ import { VideoDashboardComponent } from './video-dashboard/video-dashboard.compo
 import { StatFiltersComponent } from './stat-filters/stat-filters.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { VideoThumbNailComponent } from './video-thumb-nail/video-thumb-nail.component';
 
 const dashboardRoutes: Routes = [
   { 
@@ -17,7 +18,8 @@ const dashboardRoutes: Routes = [
     VideoDashboardComponent,
     StatFiltersComponent,
     VideoListComponent,
-    VideoPlayerComponent
+    VideoPlayerComponent,
+    VideoThumbNailComponent
   ],
   imports: [
     CommonModule,

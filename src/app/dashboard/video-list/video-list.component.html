@@ -1,6 +1,9 @@
 <h1>VIDEO LIST</h1>
-<ul>
-    <li *ngFor="let video of videos">
-        {{ video.title }} by {{ video.author }}
-    </li>
-</ul>
+<div class="mat-card card">
+    <app-video-thumb-nail
+    *ngFor="let video of videos"
+            [video]="video"
+            [selectedVideo]="selectedVideo"
+            (click)="selectVideo(video.id)"
+    ></app-video-thumb-nail>
+</div>
